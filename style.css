@@ -65,6 +65,7 @@ header {
     background-color: #b92929;
 }
 
+
 .hero {
     text-align: center;
     padding: 2rem;
@@ -75,16 +76,38 @@ header {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     color: white;
+}
 
+.hero h3 {
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-   
+    margin-bottom: 1.5rem;
+}
+
+.hero button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #FF9500;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero button:hover {
+    background-color: #b92929;
+    transform: scale(1.05);
 }
 
 .offers {
