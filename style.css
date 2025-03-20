@@ -37,14 +37,18 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 10%;
-    background-color: #ffffff;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    max-width: 150px;
+    max-width: 100px;
 }
 
 .main-nav {
@@ -56,7 +60,7 @@ body {
 .main-nav .nav-links {
     display: flex;
     list-style: none;
-    gap: 5rem;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
@@ -71,6 +75,15 @@ body {
 .main-nav .nav-links a:hover {
     color: #b92929;
 }
+
+.menu-icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
 
 
 .hero {
@@ -233,7 +246,7 @@ body {
     font-weight: bold;
 }
 
-.tienda-grid {
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
@@ -299,7 +312,7 @@ body {
     gap: 2rem;
 }
 
-/* COLUMNA DE INFORMACIÓN */
+
 .contact-info {
     padding: 1rem;
 }
@@ -424,7 +437,7 @@ contact-form input:focus,
     color: #B92929;
 }
 
-/* FORMULARIO NEWSLETTER */
+
 .footer-form {
     display: flex;
     flex-direction: column;
@@ -454,21 +467,23 @@ contact-form input:focus,
     background-color: #8e1e1e;
 }
 
-
 @media (max-width: 768px) {
-    .header {
-        flex-wrap: wrap;
+    .menu-icon {
+        display: block;
     }
 
-    .main-nav .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
+    .main-nav {
+        display: none;
+    }
+    .main-nav {
+        display: none;
     }
 
-    .product-grid {
-        grid-template-columns: 1fr;
+    .menu-icon {
+        display: block;
     }
 }
+
 
 @media (max-width: 375px) {
     .nosotros-container {
@@ -490,6 +505,13 @@ contact-form input:focus,
     }
 }
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
     .nosotros-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -516,12 +538,26 @@ contact-form input:focus,
 
 
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
     .content-container {
         flex-direction: column;
         text-align: center;
     }
 }
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
     .galeria h2 {
         font-size: 2.5rem;
     }
@@ -552,6 +588,13 @@ contact-form input:focus,
     }
 }
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -582,6 +625,13 @@ contact-form input:focus,
     }
 }
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
     .contact-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -589,11 +639,11 @@ contact-form input:focus,
     }
 
     .contact-form {
-        order: 2; /* El formulario se coloca debajo */
+        order: 2; 
     }
 
     .contact-info {
-        order: 1; /* El texto se mantiene arriba */
+        order: 1; 
     }
 
     .contact-form form {
@@ -619,6 +669,13 @@ contact-form input:focus,
     }
 }
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+    }
     .footer-container {
         flex-direction: column;
         text-align: center;
